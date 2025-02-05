@@ -1,9 +1,13 @@
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 
-export async function GET(req: Request, { params }: { params: { candidateId: string } }) {
+type Props = {
+    params: Promise<{ candidateId: string }>
+}
+
+export async function GET(req: Request, { params }: Props) {
     
-    const { candidateId } = params;
+    const { candidateId } = await params;
 
     try {
         const candidate = await db.candidate.findUnique({
