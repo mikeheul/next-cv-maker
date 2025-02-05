@@ -2,9 +2,13 @@ import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
-export async function DELETE(req: Request, { params }: { params: { experienceId: string } }) {
+type Props = {
+    params: Promise<{ experienceId: string }>
+}
+
+export async function DELETE(req: Request, { params }: Props) {
     try {
-        const { experienceId } = params;
+        const { experienceId } = await params;
 
         // Vérifier si l'expérience existe
         const experience = await db.experience.findUnique({ where: { id: experienceId } });
