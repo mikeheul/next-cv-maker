@@ -1,4 +1,4 @@
-import { fetchCandidate } from "@/app/api/candidate/fetchCandidate";
+import { fetchCandidate } from "@/app/api/candidate/hooks/fetchCandidate";
 import ExperienceForm from "@/components/ExperienceForm";
 import ExperienceList from "@/components/ExperienceList";
 import { Candidate } from "@/types/types";

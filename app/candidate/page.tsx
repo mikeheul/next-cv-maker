@@ -1,5 +1,5 @@
 import CandidateList from "@/components/CandidateList";
-import { fetchCandidates } from "../api/candidate/fetchCandidates";
+import { fetchCandidates } from "../api/candidate/hooks/fetchCandidates";
 
 const CandidatesPage = async () => {
     const candidates = await fetchCandidates();
