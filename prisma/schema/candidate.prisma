@@ -1,0 +1,9 @@
+model Candidate {
+    id          String    @id @default(auto()) @map("_id") @db.ObjectId
+    firstName   String
+    lastName    String
+    email       String   @unique
+    address     String?
+    phone       String?
+    experiences Experience[]
+}

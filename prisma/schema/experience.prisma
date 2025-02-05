@@ -1,0 +1,11 @@
+model Experience {
+    id           String    @id @default(auto()) @map("_id") @db.ObjectId
+    title        String
+    company      String
+    startDate    DateTime
+    endDate      DateTime?
+    contractType String
+    
+    candidateId  String @db.ObjectId
+    candidate    Candidate @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+}
