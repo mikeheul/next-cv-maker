@@ -5,9 +5,13 @@ import { Candidate } from "@/types/types";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 
-const CandidatePage = async ({ params }: { params: { candidateId: string } }) => {
+type PageProps = {
+    params: Promise<{ candidateId: string }>
+}
 
-    const { candidateId } = params;
+const CandidatePage = async ({ params }: PageProps) => {
+
+    const { candidateId } = await params;
     const candidate: Candidate = await fetchCandidate(candidateId);
 
     return (
