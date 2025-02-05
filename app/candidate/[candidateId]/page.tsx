@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const CandidatePage = async ({ params }: { params: { candidateId: string } }) => {
 
-    const { candidateId } = await params;
+    const { candidateId } = params;
     const candidate: Candidate = await fetchCandidate(candidateId);
 
     return (
