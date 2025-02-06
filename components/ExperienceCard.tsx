@@ -60,7 +60,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
             <button
                 onClick={() => handleDelete(experience.id)}
-                className="mt-4 text-red-500 rounded-md flex justify-center items-center"
+                className="mt-4 text-red-300 hover:text-red-500 transition-colors duration-500 rounded-md flex justify-center items-center"
             >
                 Supprimer
                 <span className="sr-only">Supprimer</span>
