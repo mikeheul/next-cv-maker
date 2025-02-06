@@ -21,14 +21,14 @@ const CandidatePage = async ({ params }: PageProps) => {
             <div className="flex flex-col py-6">
                 <Link 
                     href="/candidate"
-                    className="inline-flex items-center text-sm text-white bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-md mb-6 transition-colors duration-300 m-auto"
+                    className="inline-flex items-center text-sm text-white bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-md mb-6 transition-colors duration-300 m-auto ml-0"
                 >
                     <ArrowLeftIcon className="w-5 h-5 mr-2" /> Retour à la liste des candidats
                 </Link>
 
                 <Link 
                     href={`/api/candidate/${candidateId}/cv`} 
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md m-auto"
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md m-auto ml-0"
                     target="_blank"
                 >
                     Télécharger le CV en PDF
