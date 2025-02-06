@@ -17,6 +17,24 @@ export interface Experience {
     contractType: string;
 }
 
+export interface CandidateWithExperiences {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string | null;
+    address: string | null;
+    id: string;
+    experiences: {
+        company: string;
+        startDate: Date;
+        endDate: Date | null;
+        candidateId: string;
+        id: string;
+        title: string;
+        contractType: string;
+    }[];
+};
+
 export interface CandidateListProps {
     candidates: Candidate[];
 }
