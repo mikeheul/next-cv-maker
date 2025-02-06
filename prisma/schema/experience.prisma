@@ -5,6 +5,7 @@ model Experience {
     startDate    DateTime
     endDate      DateTime?
     contractType String
+    description  String?
     
     candidateId  String @db.ObjectId
     candidate    Candidate @relation(fields: [candidateId], references: [id], onDelete: Cascade)

@@ -27,20 +27,24 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     };
 
     return (
-        <div className="bg-slate-700 rounded-xl p-6 shadow-2xl transition-shadow duration-300">
+        <div className="bg-slate-700 rounded-xl p-6 shadow-2xl transition-shadow duration-300 relative">
             <div className="flex flex-col md:flex-row justify-between items-start">
                 <div className="flex flex-col items-start">
-                    <h4 className="text-lg font-semibold text-white mb-2">{ experience.title }</h4>
-                    
-                    <h5 className="bg-slate-600 text-slate-200 rounded-md px-3 py-1 text-sm mb-2">{ experience.company }</h5>
+                    <h4 className="text-lg font-semibold text-white mb-2">{experience.title}</h4>
 
-                    <p className="text-gray-200 text-sm">{ experience.contractType }</p>
+                    <h5 className="bg-slate-600 text-slate-200 rounded-md px-3 py-1 text-sm mb-2">{experience.company}</h5>
+                    <p className="font-thin text-white/80">{experience.description}</p>
                 </div>
 
                 <div className="flex mt-5 md:mt-0 flex-col">
-                    <p className="text-gray-300 text-sm">{ startDateFormatted }</p>
-                    <p className="text-gray-300 text-sm">{ endDateFormatted }</p>
+                    <p className="text-gray-300 text-sm">{startDateFormatted}</p>
+                    <p className="text-gray-300 text-sm">{endDateFormatted}</p>
                 </div>
+            </div>
+
+            {/* Type de contrat en bas à droite */}
+            <div className="absolute bottom-6 right-6 bg-slate-600 text-slate-200 px-4 py-2 rounded-full text-sm">
+                {experience.contractType}
             </div>
 
             <button

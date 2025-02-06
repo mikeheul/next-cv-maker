@@ -15,6 +15,7 @@ export interface Experience {
     startDate: string;
     endDate?: string;
     contractType: string;
+    description: string;
 }
 
 export interface CandidateWithExperiences {
