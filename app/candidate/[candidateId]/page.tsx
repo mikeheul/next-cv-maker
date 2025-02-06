@@ -3,6 +3,7 @@ import ExperienceForm from "@/components/ExperienceForm";
 import ExperienceList from "@/components/ExperienceList";
 import { Candidate } from "@/types/types";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
+import { DocumentIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 type PageProps = {
@@ -28,10 +29,10 @@ const CandidatePage = async ({ params }: PageProps) => {
 
                 <Link 
                     href={`/api/candidate/${candidateId}/cv`} 
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md m-auto ml-0"
+                    className="inline-flex bg-blue-600 text-white px-4 py-2 rounded-md m-auto ml-0"
                     target="_blank"
                 >
-                    Télécharger le CV en PDF
+                    <DocumentIcon className="w-5 h-5 mr-2" /> Télécharger le CV en PDF
                 </Link>
             </div>
 
