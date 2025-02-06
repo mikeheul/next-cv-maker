@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { ExperienceCardProps } from '@/types/types';
-import { TrashIcon } from '@heroicons/react/16/solid';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
@@ -61,9 +60,9 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
             <button
                 onClick={() => handleDelete(experience.id)}
-                className="mt-4 bg-red-500 hover:bg-red-700 text-white w-10 h-10 rounded-md flex justify-center items-center"
+                className="mt-4 text-red-500 rounded-md flex justify-center items-center"
             >
-                <TrashIcon className="h-5 w-5" />
+                Supprimer
                 <span className="sr-only">Supprimer</span>
             </button>
         </div>
