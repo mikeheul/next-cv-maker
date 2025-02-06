@@ -3,6 +3,7 @@
 import React from 'react';
 import { ExperienceCardProps } from '@/types/types';
 import { TrashIcon } from '@heroicons/react/16/solid';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
@@ -33,7 +34,18 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                     <h4 className="text-lg font-semibold text-white mb-2">{experience.title}</h4>
 
                     <h5 className="bg-slate-600 text-slate-200 rounded-md px-3 py-1 text-sm mb-2">{experience.company}</h5>
-                    <p className="font-thin text-white/80">{experience.description}</p>
+                    
+                    
+                    <Accordion type="single" collapsible>
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-white">Description du poste</AccordionTrigger>
+                            <AccordionContent className="text-white/80 font-thin">
+                                {experience.description}
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+
+                    {/* <p className="font-thin text-white/80">{experience.description}</p> */}
                 </div>
 
                 <div className="flex mt-5 md:mt-0 flex-col">
