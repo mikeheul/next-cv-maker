@@ -43,8 +43,6 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
-
-                    {/* <p className="font-thin text-white/80">{experience.description}</p> */}
                 </div>
 
                 <div className="flex mt-5 md:mt-0 flex-col">
@@ -53,7 +51,6 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 </div>
             </div>
 
-            {/* Type de contrat en bas à droite */}
             <div className="absolute bottom-6 right-6 bg-slate-600 text-slate-200 px-4 py-2 rounded-full text-sm">
                 {experience.contractType}
             </div>
