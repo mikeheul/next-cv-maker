@@ -36,7 +36,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                     <h5 className="bg-slate-600 text-slate-200 rounded-md px-3 py-1 text-sm mb-2">{experience.company}</h5>
                     
                     
-                    <Accordion type="single" collapsible>
+                    <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-white">Description du poste</AccordionTrigger>
                             <AccordionContent className="text-white/80 font-thin">
