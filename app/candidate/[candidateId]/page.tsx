@@ -17,7 +17,7 @@ const CandidatePage = async ({ params }: PageProps) => {
 
     return (
         <>
-            <h1 className="py-4 text-4xl font-bold">Candidat</h1>
+            <h1 className="py-4 text-4xl text-white font-bold">Candidat</h1>
 
             <div className="flex flex-col py-6">
                 <Link 
@@ -37,7 +37,7 @@ const CandidatePage = async ({ params }: PageProps) => {
             </div>
 
             <div className="border-l pl-4">
-                <h2 className="text-2xl ">{ candidate.firstName } { candidate.lastName }</h2>
+                <h2 className="text-2xl text-white ">{ candidate.firstName } { candidate.lastName }</h2>
                 <p className="text-gray-300">Email : { candidate.email }</p>
                 { candidate.phone && <p className="text-gray-300">Téléphone : { candidate.phone }</p>}
                 { candidate.address && <p className="text-gray-300">Adresse : { candidate.address }</p>}
