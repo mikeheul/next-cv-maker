@@ -7,7 +7,7 @@ function CandidateCard({ candidate }: CandidateCardProps) {
 
     return (
         <Link href={`/candidate/${candidate.id}`} passHref>
-            <Card className="cursor-pointer bg-gray-700 text-white hover:shadow-lg transition-all">
+            <Card className="cursor-pointer bg-gray-700 hover:bg-gray-600 duration-300 text-white hover:shadow-lg transition-all">
                 <CardHeader>
                     <CardTitle className="text-xl font-bold">{candidate.firstName} {candidate.lastName}</CardTitle>
                 </CardHeader>
