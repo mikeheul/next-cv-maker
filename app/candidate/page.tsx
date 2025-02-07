@@ -12,7 +12,7 @@ const CandidatesPage = async () => {
         <>
             {/* Page title displaying the number of candidates */}
             <h1 className="flex items-center py-4 text-4xl text-white font-bold">
-                <span>Candidates</span> 
+                <span>Candidats</span> 
                 {/* Display the number of candidates in a rounded badge */}
                 <span className="ml-2 inline-flex items-center rounded-full bg-blue-500 px-3 py-1 text-sm font-medium text-white">
                     {candidates.length}
