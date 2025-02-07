@@ -6,7 +6,6 @@ export const fetchCandidate = async (candidateId: string): Promise<Candidate> =>
         : 'http://localhost:3000'; 
 
     const res = await fetch(`${baseUrl}/api/candidate/${candidateId}`, {
-        next: { revalidate: 60 },
         cache: "no-store",
     });
     if (!res.ok) throw new Error("Failed to fetch candidate");

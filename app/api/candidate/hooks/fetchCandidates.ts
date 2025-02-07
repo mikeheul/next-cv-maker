@@ -4,7 +4,6 @@ export const fetchCandidates = async () => {
         : 'http://localhost:3000'; 
 
     const res = await fetch(`${baseUrl}/api/candidate/`, {
-        next: { revalidate: 60 },
         cache: "no-store",
     });
     if (!res.ok) throw new Error("Failed to fetch candidates");
