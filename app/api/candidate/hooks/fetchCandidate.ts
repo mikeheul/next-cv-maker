@@ -1,4 +1,5 @@
 import { Candidate } from "@/types/types";
+import { redirect } from "next/navigation";
 
 export const fetchCandidate = async (candidateId: string): Promise<Candidate> => {
     const baseUrl = process.env.NODE_ENV === 'production'
@@ -8,7 +9,10 @@ export const fetchCandidate = async (candidateId: string): Promise<Candidate> =>
     const res = await fetch(`${baseUrl}/api/candidate/${candidateId}`, {
         cache: "no-store",
     });
-    if (!res.ok) throw new Error("Failed to fetch candidate");
+    if (!res.ok) {
+        redirect("/candidate"); 
+    }
+
     return res.json();
 };
 
