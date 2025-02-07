@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
     return (
         <div className={`rounded-xl p-6 shadow-2xl transition-all duration-300 relative ${
-            !experience.endDate ? 'bg-cyan-900 hover:bg-cyan-800' : 'bg-slate-700 hover:bg-gray-600'
+            !experience.endDate ? 'bg-cyan-900 hover:bg-cyan-800' : 'bg-slate-700 hover:bg-gray-600/80'
         }`}>
             <div className="flex flex-col md:flex-row justify-between items-start">
                 <div className="flex flex-col items-start">
