@@ -5,7 +5,7 @@ import ExperienceCard from './ExperienceCard';
 const ExperienceList = ({ experiences }: ExperienceListProps) => {
     return (
         <div className='py-6'>
-            <h3 className="flex items-center text-xl text-white font-bold mb-2">
+            <h3 className="flex items-center text-xl text-white font-bold my-6">
                 <span>Expériences</span>
                 <span className="ml-2 inline-flex items-center rounded-full bg-slate-500 px-3 py-1 text-sm font-medium text-white">
                     {experiences.length}

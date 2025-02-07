@@ -49,7 +49,7 @@ const ExperienceForm = ({ candidateId }: { candidateId: string }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gray-800 p-4 rounded-lg mt-6">
+        <form onSubmit={handleSubmit} className="border border-slate-700 bg-gray-800 p-4 rounded-lg mt-6">
             <h3 className="text-xl font-semibold text-white mb-4">Ajouter une expérience</h3>
 
             {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -90,27 +90,29 @@ const ExperienceForm = ({ candidateId }: { candidateId: string }) => {
                     </textarea>
                 </div>
 
-                <div>
-                    <label htmlFor="startDate" className="text-white">Date de début</label>
-                    <input
-                        type="date"
-                        id="startDate"
-                        className="w-full p-2 bg-gray-700 rounded-md text-white"
-                        value={startDate}
-                        onChange={(e) => setStartDate(e.target.value)}
-                        required
-                    />
-                </div>
+                <div className="flex gap-4">
+                    <div className="w-full">
+                        <label htmlFor="startDate" className="text-white">Date de début</label>
+                        <input
+                            type="date"
+                            id="startDate"
+                            className="w-full p-2 bg-gray-700 rounded-md text-white"
+                            value={startDate}
+                            onChange={(e) => setStartDate(e.target.value)}
+                            required
+                        />
+                    </div>
 
-                <div>
-                    <label htmlFor="endDate" className="text-white">Date de fin</label>
-                    <input
-                        type="date"
-                        id="endDate"
-                        className="w-full p-2 bg-gray-700 rounded-md text-white"
-                        value={endDate}
-                        onChange={(e) => setEndDate(e.target.value)}
-                    />
+                    <div className="w-full">
+                        <label htmlFor="endDate" className="text-white">Date de fin</label>
+                        <input
+                            type="date"
+                            id="endDate"
+                            className="w-full p-2 bg-gray-700 rounded-md text-white"
+                            value={endDate}
+                            onChange={(e) => setEndDate(e.target.value)}
+                        />
+                    </div>
                 </div>
 
                 <div>

@@ -42,34 +42,36 @@ const CandidateForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gray-800 p-4 rounded-lg mt-6">
+        <form onSubmit={handleSubmit} className="border border-slate-700 bg-gray-800 p-4 rounded-lg mt-6">
             <h3 className="text-xl font-semibold text-white mb-4">Ajouter un candidat</h3>
 
             {error && <p className="text-red-500 mb-4">{error}</p>}
 
             <div className="space-y-4">
-                <div>
-                    <label htmlFor="firstName" className="text-white">Prénom</label>
-                    <input
-                        type="text"
-                        id="firstName"
-                        className="w-full p-2 bg-gray-700 rounded-md text-white"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                        required
-                    />
-                </div>
+                <div className="flex gap-4">
+                    <div className="w-full">
+                        <label htmlFor="firstName" className="text-white">Prénom</label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            className="w-full p-2 bg-gray-700 rounded-md text-white"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
+                            required
+                        />
+                    </div>
 
-                <div>
-                    <label htmlFor="lastName" className="text-white">Nom</label>
-                    <input
-                        type="text"
-                        id="lastName"
-                        className="w-full p-2 bg-gray-700 rounded-md text-white"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                        required
-                    />
+                    <div className="w-full">
+                        <label htmlFor="lastName" className="text-white">Nom</label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            className="w-full p-2 bg-gray-700 rounded-md text-white"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                            required
+                        />
+                    </div>
                 </div>
                 
                 <div>
