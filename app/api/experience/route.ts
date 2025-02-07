@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
     try {
-        const { title, company, startDate, endDate, contractType, candidate } = await req.json();
+        const { title, company, startDate, endDate, contractType, description, candidate } = await req.json();
 
         if (!title || !company || !startDate || !contractType || !candidate) {
             return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
@@ -16,10 +16,9 @@ export async function POST(req: Request) {
             startDate,
             endDate,
             contractType,
+            description,
             candidate,
         });
-
-        console.log(parsedData.error)
 
         if (!parsedData.success) {
             return NextResponse.json(
@@ -35,6 +34,7 @@ export async function POST(req: Request) {
                 startDate: new Date(startDate),
                 endDate: endDate ? new Date(endDate) : null,
                 contractType,
+                description,
                 candidate: { connect: { id: candidate } },
             },
         });

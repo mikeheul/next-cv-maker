@@ -25,6 +25,7 @@ const ExperienceForm = ({ candidateId }: { candidateId: string }) => {
             startDate,
             endDate,
             contractType,
+            description,
             candidate: candidateId,
         };
 
@@ -40,6 +41,7 @@ const ExperienceForm = ({ candidateId }: { candidateId: string }) => {
             setStartDate('');
             setEndDate('');
             setContractType('');
+            setDescription('');
             setError('');
             window.location.reload();
         } else {
