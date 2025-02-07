@@ -1,15 +1,9 @@
 import CandidateList from "@/components/CandidateList";
 import { fetchCandidates } from "../api/candidate/hooks/fetchCandidates";
 
-interface CandidatesPageProps {
-    searchParams?: { search?: string };
-}
+const CandidatesPage = async () => {
 
-const CandidatesPage = async ({ searchParams }: CandidatesPageProps) => {
-
-    const search = searchParams?.search || "";
-    const candidates = await fetchCandidates(search);
-    // const candidates = await fetchCandidates();
+    const candidates = await fetchCandidates();
 
     return (
         <>

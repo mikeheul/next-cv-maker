@@ -1,9 +1,9 @@
-export const fetchCandidates = async (search = "") => {
+export const fetchCandidates = async () => {
     const baseUrl = process.env.NODE_ENV === 'production'
         ? 'https://next-cv-maker.vercel.app' 
         : 'http://localhost:3000'; 
 
-    const url = `${baseUrl}/api/candidate?search=${search}`; // Ajoutez le paramètre de recherche à l'URL
+    const url = `${baseUrl}/api/candidate`; // Ajoutez le paramètre de recherche à l'URL
     const res = await fetch(url, {
         cache: "no-store",
     });
