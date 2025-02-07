@@ -8,7 +8,12 @@ const CandidatesPage = async () => {
 
     return (
         <>
-            <h1 className="py-4 text-4xl text-white font-bold">Candidats</h1>
+            <h1 className="flex items-center py-4 text-4xl text-white font-bold">
+                <span>Candidats</span> 
+                <span className="ml-2 inline-flex items-center rounded-full bg-blue-500 px-3 py-1 text-sm font-medium text-white">
+                    {candidates.length}
+                </span>
+            </h1>
 
             <CandidateList
                 candidates={candidates}
