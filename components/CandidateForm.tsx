@@ -43,7 +43,7 @@ const CandidateForm = () => {
 
     return (
         <form onSubmit={handleSubmit} className="border border-slate-700 bg-gray-800 p-4 rounded-lg mt-6">
-            <h3 className="text-xl font-semibold text-white mb-4">Ajouter un candidat</h3>
+            <h2 className="text-xl font-semibold text-white mb-4">Ajouter un candidat</h2>
 
             {error && <p className="text-red-500 mb-4">{error}</p>}
 
