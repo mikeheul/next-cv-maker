@@ -48,7 +48,7 @@ const CandidateForm = () => {
             {error && <p className="text-red-500 mb-4">{error}</p>}
 
             <div className="space-y-4">
-                <div className="flex gap-4">
+                <div className="flex flex-col md:flex-row gap-4">
                     <div className="w-full">
                         <label htmlFor="firstName" className="text-white">Prénom</label>
                         <input

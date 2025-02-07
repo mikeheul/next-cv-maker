@@ -92,7 +92,7 @@ const ExperienceForm = ({ candidateId }: { candidateId: string }) => {
                     </textarea>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col md:flex-row gap-4">
                     <div className="w-full">
                         <label htmlFor="startDate" className="text-white">Date de début</label>
                         <input
