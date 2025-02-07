@@ -1,21 +1,33 @@
-import Head from "next/head";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: 'Next CV Maker',
+    description: 'Créez et gérez des CV professionnels pour vos candidats facilement avec Next CV Maker.',
+    url: 'https://next-cv-maker.vercel.app/',
+    siteName: 'Next CV Maker',
+    images: [
+      {
+        url: 'https://next-cv-maker.vercel.app/screen.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://next-cv-maker.vercel.app/screen.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Next CV Maker',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  },
+};
 
 const HomePage = () => {
   return (
     <>
-      <Head>
-          <title>Next CV Maker</title>
-          <meta name="description" content="Créez et gérez des CV professionnels pour vos candidats facilement avec Next CV Maker." />
-          
-          {/* Open Graph Meta Tags */}
-          <meta property="og:title" content="Next CV Maker" />
-          <meta property="og:description" content="Next CV Maker vous permet de créer, gérer et exporter des CV professionnels pour vos candidats en toute simplicité." />
-          <meta property="og:image" content="https://next-cv-maker.vercel.app/screen.png" />
-          <meta property="og:url" content="https://next-cv-maker.vercel.app" />
-          <meta property="og:type" content="website" />
-      </Head>
-      
       <div className="bg-gray-900 text-white min-h-screen flex flex-col">
 
         {/* Header */}
