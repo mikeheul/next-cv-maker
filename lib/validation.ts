@@ -17,3 +17,11 @@ export const experienceSchema = z.object({
     contractType: z.string().min(1, "Le type de contrat est requis"),
     candidate: z.string().min(1, "Le candidat est requis"),
 });
+
+export const candidateSchema = z.object({
+    firstName: z.string().min(1, "Le prénom est requis"),
+    lastName: z.string().min(1, "Le nom  est requis"),
+    email: z.string().min(1, "Le courriel est requis").email("Le courriel doit être valide"),
+    address: z.string().min(1, "L'adresse est requise"),
+    phone: z.string().min(1, "Le numéro de téléphone est requis"),
+});

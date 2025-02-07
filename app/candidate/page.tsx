@@ -1,5 +1,6 @@
 import CandidateList from "@/components/CandidateList";
 import { fetchCandidates } from "../api/candidate/hooks/fetchCandidates";
+import CandidateForm from "@/components/CandidateForm";
 
 const CandidatesPage = async () => {
 
@@ -12,6 +13,8 @@ const CandidatesPage = async () => {
             <CandidateList
                 candidates={candidates}
             />
+
+            <CandidateForm />
         </>
     );
 };
