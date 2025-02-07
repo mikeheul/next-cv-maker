@@ -27,18 +27,18 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     };
 
     return (
-        <div className="bg-slate-700 rounded-xl p-6 shadow-2xl transition-shadow duration-300 relative">
+        <div className={`rounded-xl p-6 shadow-2xl transition-shadow duration-300 relative ${
+            endDateFormatted === 'Présent' ? 'bg-cyan-900' : 'bg-slate-700 '
+        }`}>
             <div className="flex flex-col md:flex-row justify-between items-start">
                 <div className="flex flex-col items-start">
                     <h4 className="text-lg font-semibold text-white mb-2">{experience.title}</h4>
-
                     <h5 className="bg-slate-600 text-slate-200 rounded-md px-3 py-1 text-sm mb-2">{experience.company}</h5>
-                    
-                    
+
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-white">Description du poste</AccordionTrigger>
-                            <AccordionContent className="text-white/80 font-thin">
+                            <AccordionContent className="text-white font-thin">
                                 {experience.description}
                             </AccordionContent>
                         </AccordionItem>
