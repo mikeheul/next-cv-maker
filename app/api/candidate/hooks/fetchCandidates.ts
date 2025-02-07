@@ -3,7 +3,7 @@ export const fetchCandidates = async () => {
         ? 'https://next-cv-maker.vercel.app' 
         : 'http://localhost:3000'; 
 
-    const url = `${baseUrl}/api/candidate`; // Ajoutez le paramètre de recherche à l'URL
+    const url = `${baseUrl}/api/candidate`;
     const res = await fetch(url, {
         cache: "no-store",
     });
