@@ -3,10 +3,8 @@ export const fetchCandidates = async (search = "") => {
         ? 'https://next-cv-maker.vercel.app' 
         : 'http://localhost:3000'; 
 
-    const params = new URLSearchParams();
-    if (search) params.append("search", search);
-
-    const res = await fetch(`${baseUrl}/api/candidate/?${params.toString()}`, {
+    const url = `${baseUrl}/api/candidate?search=${search}`; // Ajoutez le paramètre de recherche à l'URL
+    const res = await fetch(url, {
         cache: "no-store",
     });
     if (!res.ok) throw new Error("Failed to fetch candidates");
