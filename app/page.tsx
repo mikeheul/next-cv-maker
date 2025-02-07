@@ -89,7 +89,7 @@ const HomePage = () => {
         <section className="bg-gray-900 text-white py-16">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-8">Ils nous font confiance</h2>
-            <div className="flex justify-center space-x-12">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <div className="bg-white text-gray-900 p-6 rounded-lg shadow-md">
                 <p className="text-lg italic">NextCV m&apos;a permis de créer des CV rapidement et efficacement. Très pratique - Jean Dupont</p>
               </div>
