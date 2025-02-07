@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
     return (
         <div className={`rounded-xl p-6 shadow-2xl transition-shadow duration-300 relative ${
-            endDateFormatted === 'Présent' ? 'bg-cyan-900' : 'bg-slate-700 '
+            !experience.endDate ? 'bg-cyan-900' : 'bg-slate-700 '
         }`}>
             <div className="flex flex-col md:flex-row justify-between items-start">
                 <div className="flex flex-col items-start">
@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 </div>
             </div>
 
-            <div className="absolute bottom-6 right-6 bg-slate-600 text-slate-200 px-4 py-2 rounded-full text-sm">
+            <div className={`absolute bottom-6 right-6  text-slate-200 px-4 py-2 rounded-full text-sm ${ !experience.endDate ? 'bg-cyan-700' : 'bg-slate-600' }`}>
                 {experience.contractType}
             </div>
 
