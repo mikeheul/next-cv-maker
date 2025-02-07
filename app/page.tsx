@@ -32,7 +32,7 @@ const HomePage = () => {
 
         {/* Header */}
         <header className="bg-gray-800 shadow-md">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="hidden max-w-7xl mx-auto px-6 py-4 md:flex justify-between items-center">
             <Link href="/" className="text-2xl font-bold">NextCV</Link>
             <nav>
               <ul className="flex space-x-6">
@@ -51,7 +51,7 @@ const HomePage = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="flex-grow bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-center py-32">
+        <section className="flex-grow bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-center py-32 px-6">
           <div className="max-w-2xl mx-auto text-white">
             <h1 className="text-5xl font-extrabold mb-4">Bienvenue sur NextCV</h1>
             <p className="text-xl mb-6">Créez et gérez facilement votre CV, ajoutez des expériences professionnelles et exportez-le au format PDF en toute simplicité.</p>
