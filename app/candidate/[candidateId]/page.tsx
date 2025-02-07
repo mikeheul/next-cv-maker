@@ -27,13 +27,6 @@ const CandidatePage = async ({ params }: PageProps) => {
                     <ArrowLeftIcon className="w-5 h-5 mr-2" /> Retour à la liste des candidats
                 </Link>
 
-                <Link 
-                    href={`/api/candidate/${candidateId}/cv`} 
-                    className="inline-flex bg-blue-600 text-white px-4 py-2 rounded-md m-auto ml-0"
-                    target="_blank"
-                >
-                    <DocumentIcon className="w-5 h-5 mr-2" /> Télécharger le CV en PDF
-                </Link>
             </div>
 
             <div className="border-l pl-4">
@@ -42,8 +35,15 @@ const CandidatePage = async ({ params }: PageProps) => {
                 { candidate.phone && <p className="text-gray-300">Téléphone : { candidate.phone }</p>}
                 { candidate.address && <p className="text-gray-300">Adresse : { candidate.address }</p>}
             </div>
+            
+            <Link 
+                href={`/api/candidate/${candidateId}/cv`} 
+                className="mt-6 inline-flex bg-blue-600 text-white px-4 py-2 rounded-md m-auto ml-0"
+                target="_blank"
+            >
+                <DocumentIcon className="w-5 h-5 mr-2" /> Télécharger le CV en PDF
+            </Link>
 
-    
             {candidate.experiences && candidate.experiences.length > 0 ? (
                 <ExperienceList experiences={candidate.experiences} />
             ) : (
