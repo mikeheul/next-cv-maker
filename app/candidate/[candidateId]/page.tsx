@@ -30,7 +30,7 @@ const CandidatePage = async ({ params }: PageProps) => {
             </div>
 
             <div className="border-l pl-4">
-                <h2 className="text-2xl text-white ">{ candidate.firstName } { candidate.lastName }</h2>
+                <h2 className="text-4xl font-semibold text-white ">{ candidate.firstName } { candidate.lastName }</h2>
                 <p className="text-gray-300">Email : { candidate.email }</p>
                 { candidate.phone && <p className="text-gray-300">Téléphone : { candidate.phone }</p>}
                 { candidate.address && <p className="text-gray-300">Adresse : { candidate.address }</p>}
