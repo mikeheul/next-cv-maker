@@ -25,7 +25,7 @@ export async function DELETE(req: Request, { params }: Props) {
         return NextResponse.json({ message: "Expérience supprimée" }, { status: 200 });
 
     } catch (error) {
-        console.error('Erreur lors de la suppression :', error);
+        console.error('[DELETE_EXPERIENCE]', error);
         return NextResponse.json({ message: "Erreur serveur" }, { status: 500 });
     }
 }

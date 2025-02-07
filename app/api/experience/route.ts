@@ -42,7 +42,7 @@ export async function POST(req: Request) {
         return NextResponse.json(experience, { status: 201 });
 
     } catch (error) {
-        console.error('Error adding experience:', error);
+        console.error('[ADD_EXPERIENCE]', error);
         return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
     }
 }

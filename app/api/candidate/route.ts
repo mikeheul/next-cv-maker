@@ -17,7 +17,7 @@ export async function GET() {
         return NextResponse.json(candidates);
 
     } catch (error) {
-        console.log("[CANDIDATES]", error);
+        console.error("[CANDIDATES]", error);
         return new NextResponse("Internal Error", { status: 500 });
     }
 }
@@ -58,7 +58,7 @@ export async function POST(req: Request) {
         return NextResponse.json(candidate, { status: 201 });
 
     } catch (error) {
-        console.error('Error adding candidate:', error);
+        console.error('[ADD_CANDIDATE]', error);
         return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
     }
 }

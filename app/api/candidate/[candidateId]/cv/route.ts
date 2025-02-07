@@ -84,7 +84,7 @@ export async function GET(req: Request, { params }: Props) {
         });
 
     } catch (error) {
-        console.error('Erreur lors de la génération du CV :', error);
+        console.error('[GENERATE_CV]', error);
         return NextResponse.json({ message: 'Erreur interne' }, { status: 500 });
     }
 }
