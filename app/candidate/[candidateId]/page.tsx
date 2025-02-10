@@ -99,7 +99,7 @@ const CandidatePage = ({ params }: PageProps) => {
             {/* Bouton pour ouvrir la modale */}
             <button 
                 onClick={() => setIsModalOpen(true)}
-                className="mt-4 bg-green-600 text-white px-4 py-2 rounded-md"
+                className="mt-4 bg-green-800 text-white px-4 py-2 rounded-md"
             >
                 Ajouter une expérience
             </button>

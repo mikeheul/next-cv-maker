@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 </div>
             </div>
 
-            <div className={`absolute bottom-6 right-6  text-slate-200 px-4 py-2 rounded-full text-sm ${ !experience.endDate ? 'bg-cyan-700' : 'bg-slate-600' }`}>
+            <div className={`absolute bottom-6 right-6  text-slate-200 px-4 py-2 rounded-full text-sm ${ !experience.endDate ? 'bg-cyan-800' : 'bg-slate-600' }`}>
                 {experience.contractType}
             </div>
 
