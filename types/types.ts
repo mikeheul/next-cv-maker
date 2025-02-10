@@ -6,6 +6,7 @@ export interface Candidate {
     phone?: string;
     address?: string;
     experiences: Experience[];
+    skills: string[];
 }
 
 export interface Experience {

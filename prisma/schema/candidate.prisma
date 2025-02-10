@@ -6,4 +6,5 @@ model Candidate {
     address     String?
     phone       String?
     experiences Experience[]
+    skills      String[]
 }

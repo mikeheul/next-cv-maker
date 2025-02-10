@@ -1,6 +1,7 @@
 import { fetchCandidate } from "@/app/api/candidate/hooks/fetchCandidate";
 import ExperienceForm from "@/components/ExperienceForm";
 import ExperienceList from "@/components/ExperienceList";
+import SkillBadge from "@/components/SkillBadge";
 import { Candidate } from "@/types/types";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 import { DocumentIcon } from "@heroicons/react/24/outline";
@@ -45,6 +46,25 @@ const CandidatePage = async ({ params }: PageProps) => {
                 {/* Show address if available */}
                 { candidate.address && <p className="text-gray-300">Adresse : { candidate.address }</p>}
             </div>
+
+            {/* Display the candidate's skills if available */}
+            {candidate.skills && candidate.skills.length > 0 ? (
+                <div className="mt-6">
+                    <h3 className="text-2xl font-semibold text-white mb-2">Compétences</h3>
+                    <ul className="flex flex-wrap gap-2">
+                        {candidate.skills.map((skill, index) => (
+                            <li 
+                                key={index} 
+                                className="bg-gray-700 text-white px-3 py-1 rounded-md text-sm"
+                            >
+                                <SkillBadge skill={skill} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ) : (
+                <p className="text-gray-500 mt-4">Aucune compétence renseignée</p>
+            )}
 
             {/* Link to download the candidate's CV in PDF format */}
             <Link 
